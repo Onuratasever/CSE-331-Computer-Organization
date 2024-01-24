@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at mod_cu.v(16): always construct contains both blocking and non-blocking assignments File: D:/Quartus_Workspace/Project2Merged/mod/mod_cu.v Line: 16
+Warning (10268): Verilog HDL information at mod_dp.v(16): always construct contains both blocking and non-blocking assignments File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 16

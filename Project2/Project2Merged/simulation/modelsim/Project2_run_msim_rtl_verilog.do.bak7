@@ -1,0 +1,20 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged {D:/Quartus_Workspace/Project2Merged/Alu.v}
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/mod {D:/Quartus_Workspace/Project2Merged/mod/mod.v}
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/mod {D:/Quartus_Workspace/Project2Merged/mod/mod_cu.v}
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/mod {D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v}
+
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged {D:/Quartus_Workspace/Project2Merged/tb.v}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
+
+add wave *
+view structure
+view signals
+run -all

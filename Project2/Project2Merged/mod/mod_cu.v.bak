@@ -1,0 +1,83 @@
+module mod_cu(
+    input clk,
+    input reset,
+    input in_lt,
+    output reg write_result,
+    output reg write_temp
+);
+
+// State Encoding
+reg [1:0] state;
+localparam S0 = 2'b00,
+           S1 = 2'b01,
+           S2 = 2'b10;
+
+			  /*
+				state <= in_lt ? S2 : S1; 
+					write_result = 0;
+					write_temp = 1;
+			  */
+// State Transition
+always @(posedge clk or posedge reset) begin
+    if (reset) begin
+			state <= S0;
+			write_result = 0;
+			write_temp = 0;
+		  //wirte leri sıfırla
+    end else begin
+        case (state)
+            S0: begin 
+					if(in_lt) begin
+						state <= S2;
+						write_result = 1;
+						write_temp = 0;
+					end else begin
+						state <= S1;
+						write_result = 0;
+						write_temp = 1;
+					end
+				end
+            S1: begin 
+					if(in_lt) begin
+						state <= S2;
+						write_result = 1;
+						write_temp = 0;
+					end else begin
+						state <= S1;
+						write_result = 0;
+						write_temp = 1;
+					end
+				end
+            S2: begin 
+					state <= S2; 
+					write_result = 1;
+					write_temp = 0;
+				end
+            default: state <= S0;
+        endcase
+    end
+end
+
+/*// Output Logic
+always @(negedge clk) begin//state yazıyodu
+    case (state)
+        S0: begin
+            write_result = 0;
+            write_temp = 1;
+        end
+        S1: begin
+            write_result = 0;
+            write_temp = 1;
+        end
+        S2: begin
+            write_result = 1;
+            write_temp = 0;
+        end
+        default: begin
+            write_result = 0;
+            write_temp = 0;
+        end
+    endcase
+end*/
+
+endmodule

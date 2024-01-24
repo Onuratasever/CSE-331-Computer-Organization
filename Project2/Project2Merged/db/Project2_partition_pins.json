@@ -1,0 +1,417 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "res[0]",
+					"strict" : false
+				},
+				{
+					"name" : "res[1]",
+					"strict" : false
+				},
+				{
+					"name" : "res[2]",
+					"strict" : false
+				},
+				{
+					"name" : "res[3]",
+					"strict" : false
+				},
+				{
+					"name" : "res[4]",
+					"strict" : false
+				},
+				{
+					"name" : "res[5]",
+					"strict" : false
+				},
+				{
+					"name" : "res[6]",
+					"strict" : false
+				},
+				{
+					"name" : "res[7]",
+					"strict" : false
+				},
+				{
+					"name" : "res[8]",
+					"strict" : false
+				},
+				{
+					"name" : "res[9]",
+					"strict" : false
+				},
+				{
+					"name" : "res[10]",
+					"strict" : false
+				},
+				{
+					"name" : "res[11]",
+					"strict" : false
+				},
+				{
+					"name" : "res[12]",
+					"strict" : false
+				},
+				{
+					"name" : "res[13]",
+					"strict" : false
+				},
+				{
+					"name" : "res[14]",
+					"strict" : false
+				},
+				{
+					"name" : "res[15]",
+					"strict" : false
+				},
+				{
+					"name" : "res[16]",
+					"strict" : false
+				},
+				{
+					"name" : "res[17]",
+					"strict" : false
+				},
+				{
+					"name" : "res[18]",
+					"strict" : false
+				},
+				{
+					"name" : "res[19]",
+					"strict" : false
+				},
+				{
+					"name" : "res[20]",
+					"strict" : false
+				},
+				{
+					"name" : "res[21]",
+					"strict" : false
+				},
+				{
+					"name" : "res[22]",
+					"strict" : false
+				},
+				{
+					"name" : "res[23]",
+					"strict" : false
+				},
+				{
+					"name" : "res[24]",
+					"strict" : false
+				},
+				{
+					"name" : "res[25]",
+					"strict" : false
+				},
+				{
+					"name" : "res[26]",
+					"strict" : false
+				},
+				{
+					"name" : "res[27]",
+					"strict" : false
+				},
+				{
+					"name" : "res[28]",
+					"strict" : false
+				},
+				{
+					"name" : "res[29]",
+					"strict" : false
+				},
+				{
+					"name" : "res[30]",
+					"strict" : false
+				},
+				{
+					"name" : "res[31]",
+					"strict" : false
+				},
+				{
+					"name" : "cout",
+					"strict" : false
+				},
+				{
+					"name" : "Alu_Op[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Alu_Op[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Alu_Op[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[30]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[30]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[29]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[29]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[28]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[28]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[24]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[24]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[20]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[20]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[16]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[16]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[12]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[12]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[11]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[11]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[10]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[15]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[15]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[14]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[14]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[13]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[13]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[19]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[19]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[17]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[17]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[18]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[18]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[23]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[23]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[22]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[22]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[21]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[21]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[27]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[27]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[25]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[25]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[26]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[26]",
+					"strict" : false
+				},
+				{
+					"name" : "bit1[31]",
+					"strict" : false
+				},
+				{
+					"name" : "bit2[31]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

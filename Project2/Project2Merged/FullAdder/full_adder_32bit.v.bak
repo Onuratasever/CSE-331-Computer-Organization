@@ -1,0 +1,44 @@
+module full_adder_32bit(output [31:0] res, output cout, input [31:0] bit1, input [31:0] bit2, input c_in, input [2:0] Alu_Op);
+
+	wire [31:0] p;
+	wire [31:0] g;
+	wire [7:0] carries;
+	wire [7:0] p_secondLevel;
+	wire [7:0] g_secondLevel;
+	wire c_out, set;
+	wire [31:0] bit_not;
+	
+	//terslerini de alıyor
+	firstLevel_p_g p_and_g(p[31:0], g[31:0], bit_not[31:0], bit1[31:0], bit2[31:0], Alu_Op[2:0]);
+	
+	xor xor1(c_out, bit_not[0], bit2[0]); // çıkarma olarak 1 göndermek için
+	
+	secondLevel_p_g pAndg(p_secondLevel[7:0], g_secondLevel[7:0], p[31:0], g[31:0]);
+	
+	// ikinci seviye cal
+	carry_Lookahead_Level2 cl2(carries[7:0], p_secondLevel[7:0], g_secondLevel[7:0], c_out);
+	
+	
+	
+	
+	
+	full_adder_4bit fullader2(res[7:4], bit1[7:4], bit_not[7:4], carries[0], Alu_Op[2:0], p[7:4], g[7:4], 1'b0);
+	
+	full_adder_4bit fullader3(res[11:8], bit1[11:8], bit_not[11:8], carries[1], Alu_Op[2:0], p[11:8], g[11:8], 1'b0);
+	
+	full_adder_4bit fullader4(res[15:12], bit1[15:12], bit_not[15:12], carries[2], Alu_Op[2:0], p[15:12], g[15:12], 1'b0);
+	
+	full_adder_4bit fullader5(res[19:16], bit1[19:16], bit_not[19:16], carries[3], Alu_Op[2:0], p[19:16], g[19:16], 1'b0);
+	
+	full_adder_4bit fullader6(res[23:20], bit1[23:20], bit_not[23:20], carries[4], Alu_Op[2:0], p[23:20], g[23:20], 1'b0);
+	
+	full_adder_4bit fullader7(res[27:24], bit1[27:24], bit_not[27:24], carries[5], Alu_Op[2:0], p[27:24], g[27:24], 1'b0);
+	
+	full_adder_4bit_lastBlock fullader8(res[31:28], set, bit1[31:28], bit_not[31:28], carries[6], Alu_Op[2:0], p[31:28], g[31:28], 1'b0);
+
+	full_adder_4bit fullader1(res[3:0], bit1[3:0], bit_not[3:0], c_out, Alu_Op[2:0], p[3:0], g[3:0], set);
+
+	or or5(cout, carries[7], 1'b0); //gerek yok galiba
+
+	
+endmodule

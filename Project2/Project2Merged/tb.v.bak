@@ -1,0 +1,130 @@
+`timescale 1ns/1ns
+module tb;
+
+reg [31:0] a;
+reg [31:0] b;
+reg [2:0] Alu_Op;
+reg CLK;
+reg reset;
+wire [31:0] result;
+wire cout;
+
+full_adder_32bit and1(result[31:0], cout, a[31:0], b[31:0], 1'b0,  Alu_Op[2:0]);
+
+//wire out_gt, out_eq, out_lt;
+//comparator_4bit comp1(a[3:0], b[3:0], out_gt, out_eq, out_lt);
+//full_adder_4bit sub1(result [3:0], a[3:0], b[3:0], 1'b1, 3'b110);
+	//end
+initial	
+	begin
+	//---------------------------TEST 1-----------------------------------
+	
+/*	CLK = 1'b1;
+	reset = 1'b1;
+	sonradan mergeleyebilirim*/
+	
+	a = 32'd17;
+	b = 32'd11;
+	Alu_Op = 3'd0;
+	
+	
+	#150
+	$display("%b and %b ---> %b", a, b, result);
+	
+	//---------------------------TEST W-----------------------------------					//and --> operations[0] DONE
+																													//or --> operations[1]	DONE
+																													//xor --> operations[2]	DONE
+																													//nor --> operations[3]	DONE
+																													//lt --> operations[4]
+																													//add --> operations[5]	DONE
+																													//sub --> operations[6]	DONE
+																													//mod --> operations[7]
+	
+	a = 32'd121;
+	b = 32'd55;
+	Alu_Op = 3'd1;
+	
+	
+	#150
+	$display("%b or %b ---> %b", a, b, result);
+	
+	//---------------------------TEST 3-----------------------------------
+	
+	a = 32'd31;
+	b = 32'd32;
+	Alu_Op = 3'd2;
+	
+	
+	#150
+	$display("%b xor %b ---> %b", a, b, result);
+	
+	//---------------------------TEST 4-----------------------------------
+	
+	
+	a = 32'd7;
+	b = 32'd4;
+	Alu_Op = 3'd3;
+	
+	#150
+	$display("%b nor %b ---> %b", a, b, result);
+	
+	
+	//---------------------------TEST 5-----------------------------------
+	
+	
+	a = 32'd7;
+	b = 32'd4;
+	Alu_Op = 3'd4;
+	
+	#150
+	$display("%b less than %b ---> %b", a, b, result);
+	
+	//---------------------------TEST 6-----------------------------------
+	
+	
+	a = 32'd4;
+	b = 32'd7;
+	Alu_Op = 3'd4;
+	
+	#150
+	$display("%b less than %b ---> %b", a, b, result);
+	
+	//---------------------------TEST 7-----------------------------------
+	
+	
+	a = 32'd13;
+	b = 32'd18;
+	Alu_Op = 3'd5;
+	
+	#150
+	$display("%d add %d ---> %d", a, b, result);
+	
+	//---------------------------TEST 8-----------------------------------
+	
+	
+	a = 32'd18;
+	b = 32'd13;
+	Alu_Op = 3'd6;
+	
+	#150
+	$display("%d sub %d ---> %d", a, b, result);
+	
+	//---------------------------TEST 9-----------------------------------
+	
+	
+	a = 32'd13;
+	b = 32'd18;
+	Alu_Op = 3'd6;
+	
+	#150
+	$display("%d sub %d ---> %b", a, b, result);
+	
+	end
+	
+	/*always 
+	begin
+	#5
+	CLK = ~CLK;
+	end*/
+
+endmodule

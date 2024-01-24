@@ -1,0 +1,5 @@
+module Alu(output [31:0] res, output cout, input [31:0] bit1, input [31:0] bit2, input c_in, input [2:0] Alu_Op);
+
+	full_adder_32bit and1(res[31:0], cout, bit1[31:0], bit2[31:0], 1'b0,  Alu_Op[2:0]);
+	
+endmodule

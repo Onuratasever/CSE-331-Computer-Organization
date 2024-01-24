@@ -1,0 +1,231 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do Project2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/FullAdder {D:/Quartus_Workspace/Project2Merged/FullAdder/full_Adder_1bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:42 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged/FullAdder" D:/Quartus_Workspace/Project2Merged/FullAdder/full_Adder_1bit.v 
+# -- Compiling module full_Adder_1bit
+# 
+# Top level modules:
+# 	full_Adder_1bit
+# End time: 19:25:42 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/FullAdder {D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_4bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:42 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged/FullAdder" D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_4bit.v 
+# -- Compiling module full_adder_4bit
+# 
+# Top level modules:
+# 	full_adder_4bit
+# End time: 19:25:42 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/carry_lookahead {D:/Quartus_Workspace/Project2Merged/carry_lookahead/carry_Lookahead_Level1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:42 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged/carry_lookahead" D:/Quartus_Workspace/Project2Merged/carry_lookahead/carry_Lookahead_Level1.v 
+# -- Compiling module carry_Lookahead_Level1
+# 
+# Top level modules:
+# 	carry_Lookahead_Level1
+# End time: 19:25:42 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/FullAdder {D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_lastBit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:42 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged/FullAdder" D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_lastBit.v 
+# -- Compiling module full_adder_lastBit
+# 
+# Top level modules:
+# 	full_adder_lastBit
+# End time: 19:25:42 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/MUX {D:/Quartus_Workspace/Project2Merged/MUX/mux_not.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:42 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged/MUX" D:/Quartus_Workspace/Project2Merged/MUX/mux_not.v 
+# -- Compiling module mux_not
+# 
+# Top level modules:
+# 	mux_not
+# End time: 19:25:42 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/MUX {D:/Quartus_Workspace/Project2Merged/MUX/mux_3x1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:42 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged/MUX" D:/Quartus_Workspace/Project2Merged/MUX/mux_3x1.v 
+# -- Compiling module mux_3x1
+# 
+# Top level modules:
+# 	mux_3x1
+# End time: 19:25:42 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/FullAdder {D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:42 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged/FullAdder" D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_32bit.v 
+# -- Compiling module full_adder_32bit
+# 
+# Top level modules:
+# 	full_adder_32bit
+# End time: 19:25:42 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/carry_lookahead {D:/Quartus_Workspace/Project2Merged/carry_lookahead/secondLevel_p_g.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:42 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged/carry_lookahead" D:/Quartus_Workspace/Project2Merged/carry_lookahead/secondLevel_p_g.v 
+# -- Compiling module secondLevel_p_g
+# 
+# Top level modules:
+# 	secondLevel_p_g
+# End time: 19:25:42 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/carry_lookahead {D:/Quartus_Workspace/Project2Merged/carry_lookahead/firstLevel_p_g.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:42 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged/carry_lookahead" D:/Quartus_Workspace/Project2Merged/carry_lookahead/firstLevel_p_g.v 
+# -- Compiling module firstLevel_p_g
+# 
+# Top level modules:
+# 	firstLevel_p_g
+# End time: 19:25:42 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/carry_lookahead {D:/Quartus_Workspace/Project2Merged/carry_lookahead/carry_Lookahead_Level2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:42 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged/carry_lookahead" D:/Quartus_Workspace/Project2Merged/carry_lookahead/carry_Lookahead_Level2.v 
+# -- Compiling module carry_Lookahead_Level2
+# 
+# Top level modules:
+# 	carry_Lookahead_Level2
+# End time: 19:25:43 on Dec 10,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/FullAdder {D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_4bit_lastBlock.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:43 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged/FullAdder" D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_4bit_lastBlock.v 
+# -- Compiling module full_adder_4bit_lastBlock
+# 
+# Top level modules:
+# 	full_adder_4bit_lastBlock
+# End time: 19:25:43 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged {D:/Quartus_Workspace/Project2Merged/Alu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:43 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged" D:/Quartus_Workspace/Project2Merged/Alu.v 
+# -- Compiling module Alu
+# 
+# Top level modules:
+# 	Alu
+# End time: 19:25:43 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/mod {D:/Quartus_Workspace/Project2Merged/mod/mod.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:43 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged/mod" D:/Quartus_Workspace/Project2Merged/mod/mod.v 
+# -- Compiling module mod
+# 
+# Top level modules:
+# 	mod
+# End time: 19:25:43 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/mod {D:/Quartus_Workspace/Project2Merged/mod/mod_cu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:43 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged/mod" D:/Quartus_Workspace/Project2Merged/mod/mod_cu.v 
+# -- Compiling module mod_cu
+# 
+# Top level modules:
+# 	mod_cu
+# End time: 19:25:43 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/mod {D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:43 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged/mod" D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v 
+# -- Compiling module mod_dp
+# 
+# Top level modules:
+# 	mod_dp
+# End time: 19:25:43 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/MUX {D:/Quartus_Workspace/Project2Merged/MUX/muxAktar.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:43 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged/MUX" D:/Quartus_Workspace/Project2Merged/MUX/muxAktar.v 
+# -- Compiling module muxAktar
+# 
+# Top level modules:
+# 	muxAktar
+# End time: 19:25:43 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged {D:/Quartus_Workspace/Project2Merged/tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:43 on Dec 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Quartus_Workspace/Project2Merged" D:/Quartus_Workspace/Project2Merged/tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 19:25:43 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
+# Start time: 19:25:43 on Dec 10,2023
+# Loading work.tb
+# Loading work.Alu
+# Loading work.full_adder_32bit
+# Loading work.firstLevel_p_g
+# Loading work.mux_not
+# Loading work.secondLevel_p_g
+# Loading work.carry_Lookahead_Level2
+# Loading work.full_adder_4bit
+# Loading work.carry_Lookahead_Level1
+# Loading work.full_Adder_1bit
+# Loading work.mux_3x1
+# Loading work.full_adder_4bit_lastBlock
+# Loading work.full_adder_lastBit
+# Loading work.mod
+# Loading work.mod_cu
+# Loading work.mod_dp
+# Loading work.muxAktar
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#         17 mod         11 --->          6
+#        121 mod         55 --->         11
+# 00000000000000000000000001111001 or 00000000000000000000000000110111 ---> 00000000000000000000000001111111
+# 00000000000000000000000000011111 xor 00000000000000000000000000100000 ---> 00000000000000000000000000111111
+# 00000000000000000000000000000111 nor 00000000000000000000000000000100 ---> 11111111111111111111111111111000
+# 00000000000000000000000000000111 less than 00000000000000000000000000000100 ---> 00000000000000000000000000000000
+# 00000000000000000000000000000100 less than 00000000000000000000000000000111 ---> 00000000000000000000000000000001
+#         13 add         18 --->         31
+#         18 sub         13 --->          5
+#         13 sub         18 ---> 11111111111111111111111111111011
+# 00000000000000000000000000010001 and 00000000000000000000000000001011 ---> 00000000000000000000000000000001
+# 00000000000000000000000000101101 sub 00000000000000000000000000100100 ---> 00000000000000000000000000001001
+#         45 sub         36 --->          9
+# 00000000000000000000000000101101 and 00000000000000000000000000100100 ---> 00000000000000000000000001010001
+#         45 and         36 --->         81
+# Break key hit
+# Simulation stop requested.
+# End time: 19:31:50 on Dec 10,2023, Elapsed time: 0:06:07
+# Errors: 0, Warnings: 0

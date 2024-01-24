@@ -1,0 +1,27 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/FullAdder {D:/Quartus_Workspace/Project2Merged/FullAdder/full_Adder_1bit.v}
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/FullAdder {D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_4bit.v}
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/carry_lookahead {D:/Quartus_Workspace/Project2Merged/carry_lookahead/carry_Lookahead_Level1.v}
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/FullAdder {D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_lastBit.v}
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/MUX {D:/Quartus_Workspace/Project2Merged/MUX/mux_not.v}
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/MUX {D:/Quartus_Workspace/Project2Merged/MUX/mux_3x1.v}
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/FullAdder {D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_32bit.v}
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/carry_lookahead {D:/Quartus_Workspace/Project2Merged/carry_lookahead/secondLevel_p_g.v}
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/carry_lookahead {D:/Quartus_Workspace/Project2Merged/carry_lookahead/firstLevel_p_g.v}
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/carry_lookahead {D:/Quartus_Workspace/Project2Merged/carry_lookahead/carry_Lookahead_Level2.v}
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged/FullAdder {D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_4bit_lastBlock.v}
+
+vlog -vlog01compat -work work +incdir+D:/Quartus_Workspace/Project2Merged {D:/Quartus_Workspace/Project2Merged/tb.v}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
+
+add wave *
+view structure
+view signals
+run -all

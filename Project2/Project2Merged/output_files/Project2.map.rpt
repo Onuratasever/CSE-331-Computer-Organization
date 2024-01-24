@@ -1,0 +1,639 @@
+Analysis & Synthesis report for Project2
+Sun Dec 10 19:25:24 2023
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Alu|mod:mod1|mod_cu:control_unit|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit_lastBlock:fullader8|full_adder_lastBit:fulladder4|mux_3x1:mux"
+ 12. Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit_lastBlock:fullader8"
+ 13. Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader7"
+ 14. Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader6"
+ 15. Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader5"
+ 16. Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader4"
+ 17. Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader3"
+ 18. Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader2|full_Adder_1bit:fulladderD"
+ 19. Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader2|full_Adder_1bit:fulladderC"
+ 20. Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader2|full_Adder_1bit:fulladderB|mux_3x1:mux"
+ 21. Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader2|full_Adder_1bit:fulladderB"
+ 22. Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader2|carry_Lookahead_Level1:cl1"
+ 23. Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader2"
+ 24. Port Connectivity Checks: "full_adder_32bit:fa1"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+ 28. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Dec 10 19:25:24 2023       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; Project2                                    ;
+; Top-level Entity Name           ; Alu                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 67                                          ;
+; Total pins                      ; 103                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; Alu                ; Project2           ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++------------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path         ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                 ; Library ;
++------------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------+---------+
+; FullAdder/full_Adder_1bit.v              ; yes             ; User Verilog HDL File  ; D:/Quartus_Workspace/Project2Merged/FullAdder/full_Adder_1bit.v              ;         ;
+; FullAdder/full_adder_4bit.v              ; yes             ; User Verilog HDL File  ; D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_4bit.v              ;         ;
+; carry_lookahead/carry_Lookahead_Level1.v ; yes             ; User Verilog HDL File  ; D:/Quartus_Workspace/Project2Merged/carry_lookahead/carry_Lookahead_Level1.v ;         ;
+; FullAdder/full_adder_lastBit.v           ; yes             ; User Verilog HDL File  ; D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_lastBit.v           ;         ;
+; MUX/mux_not.v                            ; yes             ; User Verilog HDL File  ; D:/Quartus_Workspace/Project2Merged/MUX/mux_not.v                            ;         ;
+; MUX/mux_3x1.v                            ; yes             ; User Verilog HDL File  ; D:/Quartus_Workspace/Project2Merged/MUX/mux_3x1.v                            ;         ;
+; FullAdder/full_adder_32bit.v             ; yes             ; User Verilog HDL File  ; D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_32bit.v             ;         ;
+; carry_lookahead/secondLevel_p_g.v        ; yes             ; User Verilog HDL File  ; D:/Quartus_Workspace/Project2Merged/carry_lookahead/secondLevel_p_g.v        ;         ;
+; carry_lookahead/firstLevel_p_g.v         ; yes             ; User Verilog HDL File  ; D:/Quartus_Workspace/Project2Merged/carry_lookahead/firstLevel_p_g.v         ;         ;
+; carry_lookahead/carry_Lookahead_Level2.v ; yes             ; User Verilog HDL File  ; D:/Quartus_Workspace/Project2Merged/carry_lookahead/carry_Lookahead_Level2.v ;         ;
+; FullAdder/full_adder_4bit_lastBlock.v    ; yes             ; User Verilog HDL File  ; D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_4bit_lastBlock.v    ;         ;
+; Alu.v                                    ; yes             ; User Verilog HDL File  ; D:/Quartus_Workspace/Project2Merged/Alu.v                                    ;         ;
+; mod/mod.v                                ; yes             ; User Verilog HDL File  ; D:/Quartus_Workspace/Project2Merged/mod/mod.v                                ;         ;
+; mod/mod_cu.v                             ; yes             ; User Verilog HDL File  ; D:/Quartus_Workspace/Project2Merged/mod/mod_cu.v                             ;         ;
+; mod/mod_dp.v                             ; yes             ; User Verilog HDL File  ; D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v                             ;         ;
+; MUX/muxAktar.v                           ; yes             ; User Verilog HDL File  ; D:/Quartus_Workspace/Project2Merged/MUX/muxAktar.v                           ;         ;
++------------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 215         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 359         ;
+;     -- 7 input functions                    ; 11          ;
+;     -- 6 input functions                    ; 60          ;
+;     -- 5 input functions                    ; 42          ;
+;     -- 4 input functions                    ; 94          ;
+;     -- <=3 input functions                  ; 152         ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 67          ;
+;                                             ;             ;
+; I/O pins                                    ; 103         ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; reset~input ;
+; Maximum fan-out                             ; 133         ;
+; Total fan-out                               ; 1819        ;
+; Average fan-out                             ; 2.88        ;
++---------------------------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                           ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------+---------------------------+--------------+
+; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                         ; Entity Name               ; Library Name ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------+---------------------------+--------------+
+; |Alu                                        ; 359 (0)             ; 67 (0)                    ; 0                 ; 0          ; 103  ; 0            ; |Alu                                                                                        ; Alu                       ; work         ;
+;    |full_adder_32bit:fa1|                   ; 105 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1                                                                   ; full_adder_32bit          ; work         ;
+;       |carry_Lookahead_Level2:cl2|          ; 26 (26)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|carry_Lookahead_Level2:cl2                                        ; carry_Lookahead_Level2    ; work         ;
+;       |firstLevel_p_g:p_and_g|              ; 32 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g                                            ; firstLevel_p_g            ; work         ;
+;          |mux_not:mux_for_not0|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not0                       ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not11|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not11                      ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not15|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not15                      ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not17|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not17                      ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not18|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not18                      ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not19|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not19                      ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not1|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not1                       ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not21|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not21                      ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not22|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not22                      ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not23|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not23                      ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not25|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not25                      ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not26|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not26                      ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not27|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not27                      ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not29|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not29                      ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not2|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not2                       ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not30|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not30                      ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not4|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not4                       ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not5|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not5                       ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not6|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not6                       ; mux_not                   ; work         ;
+;          |mux_not:mux_for_not7|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not7                       ; mux_not                   ; work         ;
+;       |full_adder_4bit:fullader1|           ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader1                                         ; full_adder_4bit           ; work         ;
+;          |full_Adder_1bit:fulladderB|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader1|full_Adder_1bit:fulladderB              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderC|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader1|full_Adder_1bit:fulladderC              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderD|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader1|full_Adder_1bit:fulladderD              ; full_Adder_1bit           ; work         ;
+;       |full_adder_4bit:fullader2|           ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader2                                         ; full_adder_4bit           ; work         ;
+;          |full_Adder_1bit:fulladderA|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader2|full_Adder_1bit:fulladderA              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderB|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader2|full_Adder_1bit:fulladderB              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderC|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader2|full_Adder_1bit:fulladderC              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderD|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader2|full_Adder_1bit:fulladderD              ; full_Adder_1bit           ; work         ;
+;       |full_adder_4bit:fullader3|           ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader3                                         ; full_adder_4bit           ; work         ;
+;          |carry_Lookahead_Level1:cl1|       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader3|carry_Lookahead_Level1:cl1              ; carry_Lookahead_Level1    ; work         ;
+;          |full_Adder_1bit:fulladderA|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader3|full_Adder_1bit:fulladderA              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderB|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader3|full_Adder_1bit:fulladderB              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderC|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader3|full_Adder_1bit:fulladderC              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderD|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader3|full_Adder_1bit:fulladderD              ; full_Adder_1bit           ; work         ;
+;       |full_adder_4bit:fullader4|           ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader4                                         ; full_adder_4bit           ; work         ;
+;          |carry_Lookahead_Level1:cl1|       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader4|carry_Lookahead_Level1:cl1              ; carry_Lookahead_Level1    ; work         ;
+;          |full_Adder_1bit:fulladderA|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader4|full_Adder_1bit:fulladderA              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderB|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader4|full_Adder_1bit:fulladderB              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderC|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader4|full_Adder_1bit:fulladderC              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderD|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader4|full_Adder_1bit:fulladderD              ; full_Adder_1bit           ; work         ;
+;       |full_adder_4bit:fullader5|           ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader5                                         ; full_adder_4bit           ; work         ;
+;          |carry_Lookahead_Level1:cl1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader5|carry_Lookahead_Level1:cl1              ; carry_Lookahead_Level1    ; work         ;
+;          |full_Adder_1bit:fulladderA|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader5|full_Adder_1bit:fulladderA              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderB|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader5|full_Adder_1bit:fulladderB              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderC|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader5|full_Adder_1bit:fulladderC              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderD|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader5|full_Adder_1bit:fulladderD              ; full_Adder_1bit           ; work         ;
+;       |full_adder_4bit:fullader6|           ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader6                                         ; full_adder_4bit           ; work         ;
+;          |carry_Lookahead_Level1:cl1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader6|carry_Lookahead_Level1:cl1              ; carry_Lookahead_Level1    ; work         ;
+;          |full_Adder_1bit:fulladderA|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader6|full_Adder_1bit:fulladderA              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderB|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader6|full_Adder_1bit:fulladderB              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderC|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader6|full_Adder_1bit:fulladderC              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderD|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader6|full_Adder_1bit:fulladderD              ; full_Adder_1bit           ; work         ;
+;       |full_adder_4bit:fullader7|           ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader7                                         ; full_adder_4bit           ; work         ;
+;          |carry_Lookahead_Level1:cl1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader7|carry_Lookahead_Level1:cl1              ; carry_Lookahead_Level1    ; work         ;
+;          |full_Adder_1bit:fulladderA|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader7|full_Adder_1bit:fulladderA              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderB|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader7|full_Adder_1bit:fulladderB              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderC|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader7|full_Adder_1bit:fulladderC              ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderD|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit:fullader7|full_Adder_1bit:fulladderD              ; full_Adder_1bit           ; work         ;
+;       |full_adder_4bit_lastBlock:fullader8| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit_lastBlock:fullader8                               ; full_adder_4bit_lastBlock ; work         ;
+;          |carry_Lookahead_Level1:cl1|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit_lastBlock:fullader8|carry_Lookahead_Level1:cl1    ; carry_Lookahead_Level1    ; work         ;
+;          |full_Adder_1bit:fulladderA|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit_lastBlock:fullader8|full_Adder_1bit:fulladderA    ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderB|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit_lastBlock:fullader8|full_Adder_1bit:fulladderB    ; full_Adder_1bit           ; work         ;
+;          |full_Adder_1bit:fulladderC|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit_lastBlock:fullader8|full_Adder_1bit:fulladderC    ; full_Adder_1bit           ; work         ;
+;          |full_adder_lastBit:fulladder4|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|full_adder_4bit_lastBlock:fullader8|full_adder_lastBit:fulladder4 ; full_adder_lastBit        ; work         ;
+;       |secondLevel_p_g:pAndg|               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|full_adder_32bit:fa1|secondLevel_p_g:pAndg                                             ; secondLevel_p_g           ; work         ;
+;    |mod:mod1|                               ; 196 (0)             ; 67 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Alu|mod:mod1                                                                               ; mod                       ; work         ;
+;       |mod_cu:control_unit|                 ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|mod:mod1|mod_cu:control_unit                                                           ; mod_cu                    ; work         ;
+;       |mod_dp:data_path_unit|               ; 194 (194)           ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |Alu|mod:mod1|mod_dp:data_path_unit                                                         ; mod_dp                    ; work         ;
+;    |muxAktar:mux|                           ; 58 (58)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Alu|muxAktar:mux                                                                           ; muxAktar                  ; work         ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------+---------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------+
+; State Machine - |Alu|mod:mod1|mod_cu:control_unit|state ;
++----------+----------+----------+------------------------+
+; Name     ; state.S0 ; state.S2 ; state.S1               ;
++----------+----------+----------+------------------------+
+; state.S0 ; 0        ; 0        ; 0                      ;
+; state.S1 ; 1        ; 0        ; 1                      ;
+; state.S2 ; 1        ; 1        ; 0                      ;
++----------+----------+----------+------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                            ;
++-------------------------------------------+---------------------------------------------------+
+; Register name                             ; Reason for Removal                                ;
++-------------------------------------------+---------------------------------------------------+
+; mod:mod1|mod_cu:control_unit|state.S0     ; Lost fanout                                       ;
+; mod:mod1|mod_cu:control_unit|state.S1     ; Lost fanout                                       ;
+; mod:mod1|mod_cu:control_unit|write_result ; Merged with mod:mod1|mod_cu:control_unit|state.S2 ;
+; Total Number of Removed Registers = 3     ;                                                   ;
++-------------------------------------------+---------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 67    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 67    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 65    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit_lastBlock:fullader8|full_adder_lastBit:fulladder4|mux_3x1:mux" ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                            ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------+
+; res[7] ; Input ; Info     ; Stuck at GND                                                                                       ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit_lastBlock:fullader8" ;
++------+-------+----------+------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                    ;
++------+-------+----------+------------------------------------------------------------+
+; less ; Input ; Info     ; Stuck at GND                                               ;
++------+-------+----------+------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader7" ;
++------+-------+----------+--------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                          ;
++------+-------+----------+--------------------------------------------------+
+; less ; Input ; Info     ; Stuck at GND                                     ;
++------+-------+----------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader6" ;
++------+-------+----------+--------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                          ;
++------+-------+----------+--------------------------------------------------+
+; less ; Input ; Info     ; Stuck at GND                                     ;
++------+-------+----------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader5" ;
++------+-------+----------+--------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                          ;
++------+-------+----------+--------------------------------------------------+
+; less ; Input ; Info     ; Stuck at GND                                     ;
++------+-------+----------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader4" ;
++------+-------+----------+--------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                          ;
++------+-------+----------+--------------------------------------------------+
+; less ; Input ; Info     ; Stuck at GND                                     ;
++------+-------+----------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader3" ;
++------+-------+----------+--------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                          ;
++------+-------+----------+--------------------------------------------------+
+; less ; Input ; Info     ; Stuck at GND                                     ;
++------+-------+----------+--------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader2|full_Adder_1bit:fulladderD" ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                     ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; less ; Input ; Info     ; Stuck at GND                                                                ;
++------+-------+----------+-----------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader2|full_Adder_1bit:fulladderC" ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                     ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; less ; Input ; Info     ; Stuck at GND                                                                ;
++------+-------+----------+-----------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader2|full_Adder_1bit:fulladderB|mux_3x1:mux" ;
++--------+-------+----------+---------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                               ;
++--------+-------+----------+---------------------------------------------------------------------------------------+
+; res[7] ; Input ; Info     ; Stuck at GND                                                                          ;
++--------+-------+----------+---------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader2|full_Adder_1bit:fulladderB" ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                     ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; less ; Input ; Info     ; Stuck at GND                                                                ;
++------+-------+----------+-----------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader2|carry_Lookahead_Level1:cl1"            ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; res[3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "full_adder_32bit:fa1|full_adder_4bit:fullader2" ;
++------+-------+----------+--------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                          ;
++------+-------+----------+--------------------------------------------------+
+; less ; Input ; Info     ; Stuck at GND                                     ;
++------+-------+----------+--------------------------------------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "full_adder_32bit:fa1" ;
++------+-------+----------+------------------------+
+; Port ; Type  ; Severity ; Details                ;
++------+-------+----------+------------------------+
+; c_in ; Input ; Info     ; Stuck at GND           ;
++------+-------+----------+------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 67                          ;
+;     CLR               ; 2                           ;
+;     ENA CLR           ; 65                          ;
+; arriav_lcell_comb     ; 359                         ;
+;     extend            ; 11                          ;
+;         7 data inputs ; 11                          ;
+;     normal            ; 316                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 59                          ;
+;         3 data inputs ; 60                          ;
+;         4 data inputs ; 94                          ;
+;         5 data inputs ; 42                          ;
+;         6 data inputs ; 60                          ;
+;     shared            ; 32                          ;
+;         2 data inputs ; 32                          ;
+; boundary_port         ; 103                         ;
+;                       ;                             ;
+; Max LUT depth         ; 12.00                       ;
+; Average LUT depth     ; 7.06                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Sun Dec 10 19:25:15 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project2 -c Project2
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file fulladder/full_adder_1bit.v
+    Info (12023): Found entity 1: full_Adder_1bit File: D:/Quartus_Workspace/Project2Merged/FullAdder/full_Adder_1bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fulladder/full_adder_4bit.v
+    Info (12023): Found entity 1: full_adder_4bit File: D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_4bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file carry_lookahead/carry_lookahead_level1.v
+    Info (12023): Found entity 1: carry_Lookahead_Level1 File: D:/Quartus_Workspace/Project2Merged/carry_lookahead/carry_Lookahead_Level1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fulladder/full_adder_lastbit.v
+    Info (12023): Found entity 1: full_adder_lastBit File: D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_lastBit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux/mux_not.v
+    Info (12023): Found entity 1: mux_not File: D:/Quartus_Workspace/Project2Merged/MUX/mux_not.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux/mux_3x1.v
+    Info (12023): Found entity 1: mux_3x1 File: D:/Quartus_Workspace/Project2Merged/MUX/mux_3x1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fulladder/full_adder_32bit.v
+    Info (12023): Found entity 1: full_adder_32bit File: D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_32bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file carry_lookahead/secondlevel_p_g.v
+    Info (12023): Found entity 1: secondLevel_p_g File: D:/Quartus_Workspace/Project2Merged/carry_lookahead/secondLevel_p_g.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file carry_lookahead/firstlevel_p_g.v
+    Info (12023): Found entity 1: firstLevel_p_g File: D:/Quartus_Workspace/Project2Merged/carry_lookahead/firstLevel_p_g.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file carry_lookahead/carry_lookahead_level2.v
+    Info (12023): Found entity 1: carry_Lookahead_Level2 File: D:/Quartus_Workspace/Project2Merged/carry_lookahead/carry_Lookahead_Level2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fulladder/full_adder_4bit_lastblock.v
+    Info (12023): Found entity 1: full_adder_4bit_lastBlock File: D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_4bit_lastBlock.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb.v
+    Info (12023): Found entity 1: tb File: D:/Quartus_Workspace/Project2Merged/tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: Alu File: D:/Quartus_Workspace/Project2Merged/Alu.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mod/mod.v
+    Info (12023): Found entity 1: mod File: D:/Quartus_Workspace/Project2Merged/mod/mod.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mod/mod_cu.v
+    Info (12023): Found entity 1: mod_cu File: D:/Quartus_Workspace/Project2Merged/mod/mod_cu.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mod/mod_dp.v
+    Info (12023): Found entity 1: mod_dp File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux/muxaktar.v
+    Info (12023): Found entity 1: muxAktar File: D:/Quartus_Workspace/Project2Merged/MUX/muxAktar.v Line: 1
+Info (12127): Elaborating entity "Alu" for the top level hierarchy
+Info (12128): Elaborating entity "full_adder_32bit" for hierarchy "full_adder_32bit:fa1" File: D:/Quartus_Workspace/Project2Merged/Alu.v Line: 6
+Info (12128): Elaborating entity "firstLevel_p_g" for hierarchy "full_adder_32bit:fa1|firstLevel_p_g:p_and_g" File: D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_32bit.v Line: 12
+Info (12128): Elaborating entity "mux_not" for hierarchy "full_adder_32bit:fa1|firstLevel_p_g:p_and_g|mux_not:mux_for_not0" File: D:/Quartus_Workspace/Project2Merged/carry_lookahead/firstLevel_p_g.v Line: 6
+Info (12128): Elaborating entity "secondLevel_p_g" for hierarchy "full_adder_32bit:fa1|secondLevel_p_g:pAndg" File: D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_32bit.v Line: 18
+Info (12128): Elaborating entity "carry_Lookahead_Level2" for hierarchy "full_adder_32bit:fa1|carry_Lookahead_Level2:cl2" File: D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_32bit.v Line: 21
+Info (12128): Elaborating entity "full_adder_4bit" for hierarchy "full_adder_32bit:fa1|full_adder_4bit:fullader2" File: D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_32bit.v Line: 25
+Info (12128): Elaborating entity "carry_Lookahead_Level1" for hierarchy "full_adder_32bit:fa1|full_adder_4bit:fullader2|carry_Lookahead_Level1:cl1" File: D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_4bit.v Line: 5
+Info (12128): Elaborating entity "full_Adder_1bit" for hierarchy "full_adder_32bit:fa1|full_adder_4bit:fullader2|full_Adder_1bit:fulladderB" File: D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_4bit.v Line: 9
+Info (12128): Elaborating entity "mux_3x1" for hierarchy "full_adder_32bit:fa1|full_adder_4bit:fullader2|full_Adder_1bit:fulladderB|mux_3x1:mux" File: D:/Quartus_Workspace/Project2Merged/FullAdder/full_Adder_1bit.v Line: 34
+Info (12128): Elaborating entity "full_adder_4bit_lastBlock" for hierarchy "full_adder_32bit:fa1|full_adder_4bit_lastBlock:fullader8" File: D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_32bit.v Line: 37
+Info (12128): Elaborating entity "full_adder_lastBit" for hierarchy "full_adder_32bit:fa1|full_adder_4bit_lastBlock:fullader8|full_adder_lastBit:fulladder4" File: D:/Quartus_Workspace/Project2Merged/FullAdder/full_adder_4bit_lastBlock.v Line: 35
+Info (12128): Elaborating entity "mod" for hierarchy "mod:mod1" File: D:/Quartus_Workspace/Project2Merged/Alu.v Line: 8
+Info (12128): Elaborating entity "mod_cu" for hierarchy "mod:mod1|mod_cu:control_unit" File: D:/Quartus_Workspace/Project2Merged/mod/mod.v Line: 18
+Info (12128): Elaborating entity "mod_dp" for hierarchy "mod:mod1|mod_dp:data_path_unit" File: D:/Quartus_Workspace/Project2Merged/mod/mod.v Line: 30
+Info (12128): Elaborating entity "muxAktar" for hierarchy "muxAktar:mux" File: D:/Quartus_Workspace/Project2Merged/Alu.v Line: 10
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[0]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[0]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[0]~1" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[1]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[1]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[1]~5" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[2]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[2]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[2]~9" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[3]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[3]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[3]~13" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[4]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[4]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[4]~17" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[5]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[5]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[5]~21" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[6]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[6]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[6]~25" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[7]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[7]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[7]~29" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[8]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[8]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[8]~33" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[9]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[9]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[9]~37" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[10]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[10]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[10]~41" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[11]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[11]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[11]~45" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[12]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[12]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[12]~49" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[13]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[13]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[13]~53" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[14]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[14]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[14]~57" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[15]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[15]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[15]~61" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[16]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[16]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[16]~65" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[17]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[17]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[17]~69" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[18]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[18]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[18]~73" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[19]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[19]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[19]~77" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[20]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[20]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[20]~81" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[21]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[21]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[21]~85" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[22]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[22]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[22]~89" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[23]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[23]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[23]~93" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[24]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[24]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[24]~97" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[25]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[25]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[25]~101" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[26]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[26]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[26]~105" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[27]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[27]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[27]~109" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[28]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[28]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[28]~113" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[29]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[29]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[29]~117" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[30]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[30]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[30]~121" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|Temp[31]" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|Temp[31]~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|Temp[31]~125" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 22
+    Warning (13310): Register "mod:mod1|mod_dp:data_path_unit|out_lt" is converted into an equivalent circuit using register "mod:mod1|mod_dp:data_path_unit|out_lt~_emulated" and latch "mod:mod1|mod_dp:data_path_unit|out_lt~1" File: D:/Quartus_Workspace/Project2Merged/mod/mod_dp.v Line: 10
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file D:/Quartus_Workspace/Project2Merged/output_files/Project2.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "c_in" File: D:/Quartus_Workspace/Project2Merged/Alu.v Line: 1
+Info (21057): Implemented 495 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 70 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 392 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Sun Dec 10 19:25:24 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:20
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Quartus_Workspace/Project2Merged/output_files/Project2.map.smsg.
+
+
