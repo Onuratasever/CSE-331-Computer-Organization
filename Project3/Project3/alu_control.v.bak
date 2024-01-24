@@ -1,0 +1,78 @@
+module  alu_control( //
+	output  [2:0] alu_ctr,  // c2 c1 c0
+	input [5:0] function_code, // f5 f4 f3 f2 f1 f0
+	input [2:0] ALUop          // x2 x1 x0 
+);
+
+wire x1_not, x0_not, f2_not;
+wire o1, o2, o3, o4;
+wire o5, o6, o7, o8, o9;
+wire o10, o11, o12;
+
+
+not not1 (x1_not, ALUop[1]);
+not not2 (x0_not, ALUop[0]);
+not not3 (f2_not, function_code[2]);
+
+// Calculate c0 = x0(x1' + x1(f1 xor f0))
+
+//f1 xor f0
+xor xor1 (o1,function_code[1], function_code[0]);
+
+
+//x1(f1 xor f0)
+and and2 (o3, o1, ALUop[1]);
+
+
+
+// x1' + x1(f1 xor f0)
+or or2 (o4, o3, x1_not);
+
+//x0(x1' + x1(f1 xor f0))
+and and3 (alu_ctr[0], o4, ALUop[0]);
+
+
+
+// Calculate c1 = x2x1(x0' + x0f0f1f2')
+
+
+//x2x1
+and and4 (o5, ALUop[1], ALUop[2]);
+
+//x0f0
+and and5 (o6, ALUop[0], function_code[0]);
+
+//f1f2'
+and and6(o7, f2_not, function_code[1]);
+
+//x0f0f1f2'
+and and7(o8, o6, o7);
+
+// x0' + x0f0f1f2'
+or or3 (o9, x0_not, o8);
+
+//x2x1(x0' + x0f0f1f2')
+and and8 (alu_ctr[1], o9, o5);
+
+
+
+// Calculate c2 = x2(x1' + x0' + f2' + f1)
+
+//x1' + x0'
+or or4 (o10, x0_not, x1_not);
+
+//f2' + f1
+or or5 (o11, f2_not, function_code[1]);
+
+// x1' + x0' + f2' + f1
+or or6 (o12, o10, o11);
+
+// x2(x1' + x0' + f2' + f1)
+and and9 (alu_ctr[2], ALUop[2], o12);
+
+
+
+
+
+endmodule
+

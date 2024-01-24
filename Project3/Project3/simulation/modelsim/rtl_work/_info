@@ -1,0 +1,571 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Quartus_Workspace/proje3Onur/simulation/modelsim
+vAlu
+Z1 !s110 1705671218
+!i10b 1
+!s100 GgQc1VdmJbIkDUkfBlTF02
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IJea@Nl@1jFjTQhmnT17Hz1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1705665267
+8D:/Quartus_Workspace/proje3Onur/Alu.v
+FD:/Quartus_Workspace/proje3Onur/Alu.v
+!i122 14
+L0 1 13
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1705671218.000000
+!s107 D:/Quartus_Workspace/proje3Onur/Alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur|D:/Quartus_Workspace/proje3Onur/Alu.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+D:/Quartus_Workspace/proje3Onur
+Z8 tCvgOpt 0
+n@alu
+valu_control
+Z9 !s110 1705671217
+!i10b 1
+!s100 FoM=2NghoBjj@<j>ZGg6R2
+R2
+IgO=emg:@mNm9mLD;]]kLj3
+R3
+R0
+w1705668687
+8D:/Quartus_Workspace/proje3Onur/alu_control.v
+FD:/Quartus_Workspace/proje3Onur/alu_control.v
+!i122 2
+L0 1 32
+R4
+r1
+!s85 0
+31
+Z10 !s108 1705671217.000000
+!s107 D:/Quartus_Workspace/proje3Onur/alu_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur|D:/Quartus_Workspace/proje3Onur/alu_control.v|
+!i113 1
+R6
+R7
+R8
+vcarry_Lookahead_Level1
+R9
+!i10b 1
+!s100 e`aR;z]>8_CKE1W6EgS`M0
+R2
+IOH`^oNXoLjmSKX?OL:b]Y2
+R3
+R0
+w1705584516
+8D:/Quartus_Workspace/proje3Onur/alu/carry_Lookahead_Level1.v
+FD:/Quartus_Workspace/proje3Onur/alu/carry_Lookahead_Level1.v
+!i122 5
+L0 1 18
+R4
+r1
+!s85 0
+31
+R10
+!s107 D:/Quartus_Workspace/proje3Onur/alu/carry_Lookahead_Level1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur/alu|D:/Quartus_Workspace/proje3Onur/alu/carry_Lookahead_Level1.v|
+!i113 1
+R6
+Z11 !s92 -vlog01compat -work work +incdir+D:/Quartus_Workspace/proje3Onur/alu
+R8
+ncarry_@lookahead_@level1
+vcarry_Lookahead_Level2
+R1
+!i10b 1
+!s100 @K8Z13e?WA_CC>dCDN0zn2
+R2
+IbC<GmCi_z]QTllDgb;_<e0
+R3
+R0
+w1702210880
+8D:/Quartus_Workspace/proje3Onur/alu/carry_Lookahead_Level2.v
+FD:/Quartus_Workspace/proje3Onur/alu/carry_Lookahead_Level2.v
+!i122 13
+Z12 L0 1 29
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Quartus_Workspace/proje3Onur/alu/carry_Lookahead_Level2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur/alu|D:/Quartus_Workspace/proje3Onur/alu/carry_Lookahead_Level2.v|
+!i113 1
+R6
+R11
+R8
+ncarry_@lookahead_@level2
+vcontrol_unit
+R9
+!i10b 1
+!s100 oaViLLl0XiokMe@QUWE232
+R2
+IEO@lU`]8f9LEO6QRz=1M=3
+R3
+R0
+w1705666732
+8D:/Quartus_Workspace/proje3Onur/control_unit.v
+FD:/Quartus_Workspace/proje3Onur/control_unit.v
+!i122 1
+L0 1 73
+R4
+r1
+!s85 0
+31
+R10
+!s107 D:/Quartus_Workspace/proje3Onur/control_unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur|D:/Quartus_Workspace/proje3Onur/control_unit.v|
+!i113 1
+R6
+R7
+R8
+vextend_32bit
+R1
+!i10b 1
+!s100 LfA1f:mN1^c:eB7m3h;T`0
+R2
+IBATWWXIFa2n[b0OG3^=kM0
+R3
+R0
+w1705659369
+8D:/Quartus_Workspace/proje3Onur/extend_32bit.v
+FD:/Quartus_Workspace/proje3Onur/extend_32bit.v
+!i122 16
+L0 1 40
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Quartus_Workspace/proje3Onur/extend_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur|D:/Quartus_Workspace/proje3Onur/extend_32bit.v|
+!i113 1
+R6
+R7
+R8
+vfirstLevel_p_g
+R1
+!i10b 1
+!s100 =>m[7m6@iIG6P9k=@_Q;43
+R2
+I`9W4Ij>Sa1<U:ncJYS7590
+R3
+R0
+w1702210854
+8D:/Quartus_Workspace/proje3Onur/alu/firstLevel_p_g.v
+FD:/Quartus_Workspace/proje3Onur/alu/firstLevel_p_g.v
+!i122 12
+L0 1 137
+R4
+r1
+!s85 0
+31
+R10
+!s107 D:/Quartus_Workspace/proje3Onur/alu/firstLevel_p_g.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur/alu|D:/Quartus_Workspace/proje3Onur/alu/firstLevel_p_g.v|
+!i113 1
+R6
+R11
+R8
+nfirst@level_p_g
+vfull_Adder_1bit
+R9
+!i10b 1
+!s100 VGm?Z^?0j7ZUIOQ4ESI>[3
+R2
+ILSNTM7V]Ie@;QCS?Z0PjS1
+R3
+R0
+w1705584464
+8D:/Quartus_Workspace/proje3Onur/alu/full_Adder_1bit.v
+FD:/Quartus_Workspace/proje3Onur/alu/full_Adder_1bit.v
+!i122 3
+L0 1 36
+R4
+r1
+!s85 0
+31
+R10
+!s107 D:/Quartus_Workspace/proje3Onur/alu/full_Adder_1bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur/alu|D:/Quartus_Workspace/proje3Onur/alu/full_Adder_1bit.v|
+!i113 1
+R6
+R11
+R8
+nfull_@adder_1bit
+vfull_adder_32bit
+R9
+!i10b 1
+!s100 ?@CLcSDOjm1PBm9iXMgef1
+R2
+IZ[BUMUa:Y65jn_1`RZf^d1
+R3
+R0
+w1705669935
+8D:/Quartus_Workspace/proje3Onur/alu/full_adder_32bit.v
+FD:/Quartus_Workspace/proje3Onur/alu/full_adder_32bit.v
+!i122 10
+L0 1 44
+R4
+r1
+!s85 0
+31
+R10
+!s107 D:/Quartus_Workspace/proje3Onur/alu/full_adder_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur/alu|D:/Quartus_Workspace/proje3Onur/alu/full_adder_32bit.v|
+!i113 1
+R6
+R11
+R8
+vfull_adder_4bit
+R9
+!i10b 1
+!s100 cV5mR_FiYl8MT2fCI28]k3
+R2
+IkGD[m1H6ld4:JIN_WSHOc3
+R3
+R0
+w1705584496
+8D:/Quartus_Workspace/proje3Onur/alu/full_adder_4bit.v
+FD:/Quartus_Workspace/proje3Onur/alu/full_adder_4bit.v
+!i122 4
+L0 1 17
+R4
+r1
+!s85 0
+31
+R10
+!s107 D:/Quartus_Workspace/proje3Onur/alu/full_adder_4bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur/alu|D:/Quartus_Workspace/proje3Onur/alu/full_adder_4bit.v|
+!i113 1
+R6
+R11
+R8
+vfull_adder_4bit_lastBlock
+R9
+!i10b 1
+!s100 JNF?EJJVmK_To^H`]OS4U0
+R2
+I`JI8hNI130e7aFePgK^z00
+R3
+R0
+w1702210941
+8D:/Quartus_Workspace/proje3Onur/alu/full_adder_4bit_lastBlock.v
+FD:/Quartus_Workspace/proje3Onur/alu/full_adder_4bit_lastBlock.v
+!i122 11
+L0 1 45
+R4
+r1
+!s85 0
+31
+R10
+!s107 D:/Quartus_Workspace/proje3Onur/alu/full_adder_4bit_lastBlock.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur/alu|D:/Quartus_Workspace/proje3Onur/alu/full_adder_4bit_lastBlock.v|
+!i113 1
+R6
+R11
+R8
+nfull_adder_4bit_last@block
+vfull_adder_lastBit
+R9
+!i10b 1
+!s100 S`A>Y9_Ikd[LWK@iD<QmQ2
+R2
+IiQE?L[>FDmXPV@:S[VR?B3
+R3
+R0
+w1705584545
+8D:/Quartus_Workspace/proje3Onur/alu/full_adder_lastBit.v
+FD:/Quartus_Workspace/proje3Onur/alu/full_adder_lastBit.v
+!i122 6
+L0 1 37
+R4
+r1
+!s85 0
+31
+R10
+!s107 D:/Quartus_Workspace/proje3Onur/alu/full_adder_lastBit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur/alu|D:/Quartus_Workspace/proje3Onur/alu/full_adder_lastBit.v|
+!i113 1
+R6
+R11
+R8
+nfull_adder_last@bit
+vinstruction_block
+R1
+!i10b 1
+!s100 9mJj<3I0b38ShY^OIfBT_1
+R2
+ILUDKOJ>Jd5LY^Je[mPU@30
+R3
+R0
+w1705511760
+8D:/Quartus_Workspace/proje3Onur/instruction_block.v
+FD:/Quartus_Workspace/proje3Onur/instruction_block.v
+!i122 20
+L0 1 19
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Quartus_Workspace/proje3Onur/instruction_block.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur|D:/Quartus_Workspace/proje3Onur/instruction_block.v|
+!i113 1
+R6
+R7
+R8
+vmips
+!s110 1705671216
+!i10b 1
+!s100 1X0li_S<h<EFVb?Rnz6an2
+R2
+I7`O3SWcCzPjb>2lKWmOiB1
+R3
+R0
+w1705670576
+8D:/Quartus_Workspace/proje3Onur/mips.v
+FD:/Quartus_Workspace/proje3Onur/mips.v
+!i122 0
+L0 2 71
+R4
+r1
+!s85 0
+31
+!s108 1705671216.000000
+!s107 D:/Quartus_Workspace/proje3Onur/mips.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur|D:/Quartus_Workspace/proje3Onur/mips.v|
+!i113 1
+R6
+R7
+R8
+vmux2x1_32bit
+R1
+!i10b 1
+!s100 LPTHaTYBXCnM7YI:EeV>o1
+R2
+I8W>=ZgZg15^UazVdDJRN50
+R3
+R0
+w1705667029
+8D:/Quartus_Workspace/proje3Onur/mux2x1_32bit.v
+FD:/Quartus_Workspace/proje3Onur/mux2x1_32bit.v
+!i122 17
+R12
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Quartus_Workspace/proje3Onur/mux2x1_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur|D:/Quartus_Workspace/proje3Onur/mux2x1_32bit.v|
+!i113 1
+R6
+R7
+R8
+vmux2x1_5bit
+R1
+!i10b 1
+!s100 XiMcOj:Blm5I]gjG7zZl>3
+R2
+IC9CNdmlLQF1iS6ZO6KLbO0
+R3
+R0
+w1705665818
+8D:/Quartus_Workspace/proje3Onur/mux2x1_5bit.v
+FD:/Quartus_Workspace/proje3Onur/mux2x1_5bit.v
+!i122 15
+L0 1 30
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Quartus_Workspace/proje3Onur/mux2x1_5bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur|D:/Quartus_Workspace/proje3Onur/mux2x1_5bit.v|
+!i113 1
+R6
+R7
+R8
+vmux_3x1
+R9
+!i10b 1
+!s100 `UBBmYF?^9lZ1^QRSQ>l61
+R2
+Il0SaZclc_c7=iP:X?DY6X0
+R3
+R0
+w1705584587
+8D:/Quartus_Workspace/proje3Onur/alu/mux_3x1.v
+FD:/Quartus_Workspace/proje3Onur/alu/mux_3x1.v
+!i122 8
+L0 1 58
+R4
+r1
+!s85 0
+31
+R10
+!s107 D:/Quartus_Workspace/proje3Onur/alu/mux_3x1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur/alu|D:/Quartus_Workspace/proje3Onur/alu/mux_3x1.v|
+!i113 1
+R6
+R11
+R8
+vmux_not
+R9
+!i10b 1
+!s100 `_m1jmO91R^oaDae1B`6_2
+R2
+IG;d1X7gEIUM2E;[EchRcP2
+R3
+R0
+w1705584570
+8D:/Quartus_Workspace/proje3Onur/alu/mux_not.v
+FD:/Quartus_Workspace/proje3Onur/alu/mux_not.v
+!i122 7
+L0 1 35
+R4
+r1
+!s85 0
+31
+R10
+!s107 D:/Quartus_Workspace/proje3Onur/alu/mux_not.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur/alu|D:/Quartus_Workspace/proje3Onur/alu/mux_not.v|
+!i113 1
+R6
+R11
+R8
+vmy_and_32bit
+R1
+!i10b 1
+!s100 n09g@Jz55mj5zNhA@[jS@2
+R2
+I?R?0N0_gCICQB4e=3:S5a3
+R3
+R0
+w1705667057
+8D:/Quartus_Workspace/proje3Onur/my_and_32bit.v
+FD:/Quartus_Workspace/proje3Onur/my_and_32bit.v
+!i122 18
+L0 1 41
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Quartus_Workspace/proje3Onur/my_and_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur|D:/Quartus_Workspace/proje3Onur/my_and_32bit.v|
+!i113 1
+R6
+R7
+R8
+vmy_or_32bit
+R1
+!i10b 1
+!s100 P4RAi84Yz1R^iJhc_Tzom1
+R2
+IG[Q3J?Sn1e8dd>B=GeVeV3
+R3
+R0
+w1705667043
+8D:/Quartus_Workspace/proje3Onur/my_or_32bit.v
+FD:/Quartus_Workspace/proje3Onur/my_or_32bit.v
+!i122 19
+L0 1 42
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Quartus_Workspace/proje3Onur/my_or_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur|D:/Quartus_Workspace/proje3Onur/my_or_32bit.v|
+!i113 1
+R6
+R7
+R8
+vregister_block
+R1
+!i10b 1
+!s100 OFWglh9cLOci^V1UAn8]J3
+R2
+Iiz^U7WB:dV]ECW1m9ZUAc0
+R3
+R0
+w1705671107
+8D:/Quartus_Workspace/proje3Onur/register_block.v
+FD:/Quartus_Workspace/proje3Onur/register_block.v
+!i122 21
+L0 2 26
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Quartus_Workspace/proje3Onur/register_block.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur|D:/Quartus_Workspace/proje3Onur/register_block.v|
+!i113 1
+R6
+R7
+R8
+vsecondLevel_p_g
+R9
+!i10b 1
+!s100 LA`XU03W]oT?8AC96<Jg_3
+R2
+IJeom76Phf8IoeTboN?PBY0
+R3
+R0
+w1702210748
+8D:/Quartus_Workspace/proje3Onur/alu/secondLevel_p_g.v
+FD:/Quartus_Workspace/proje3Onur/alu/secondLevel_p_g.v
+!i122 9
+L0 1 164
+R4
+r1
+!s85 0
+31
+R10
+!s107 D:/Quartus_Workspace/proje3Onur/alu/secondLevel_p_g.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur/alu|D:/Quartus_Workspace/proje3Onur/alu/secondLevel_p_g.v|
+!i113 1
+R6
+R11
+R8
+nsecond@level_p_g
+vtb
+!s110 1705671219
+!i10b 1
+!s100 Cb_13VzMmYS786e_7e0Tf1
+R2
+IaHgloRiRfW9NVoXJY^D1A2
+R3
+R0
+w1705671135
+8D:/Quartus_Workspace/proje3Onur/tb.v
+FD:/Quartus_Workspace/proje3Onur/tb.v
+!i122 22
+L0 2 97
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Quartus_Workspace/proje3Onur/tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Quartus_Workspace/proje3Onur|D:/Quartus_Workspace/proje3Onur/tb.v|
+!i113 1
+R6
+R7
+R8

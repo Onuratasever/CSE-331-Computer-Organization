@@ -1,0 +1,103 @@
+module control_unit(
+	 output regDst,
+	 output branch,
+	 output memRead,
+	 output memWrite, 
+	 output [2:0] ALUop,
+	 output ALUsrc,
+	 output regWrite,
+	 output jump,
+	 output byteOperations,
+	 output move,
+	 
+	 input [5:0] opcode
+);
+
+	wire op_not_0, op_not_1, op_not_2, op_not_3, op_not_4, op_not_5;
+	wire t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t20, t21;
+	wire RD, B, L, S, M, J, Imm, AS, RW, BO;
+	
+	not not0 (op_not_0, opcode[0]);
+	not not1 (op_not_1, opcode[1]);
+	not not2 (op_not_2, opcode[2]);
+	not not3 (op_not_3, opcode[3]);
+	not not4 (op_not_4, opcode[4]);
+	not not5 (op_not_5, opcode[5]);
+	
+	
+	my_and_3bit mand1 (t1, op_not_0, op_not_1, op_not_2); // p0'p1'p2'
+	my_and_3bit mand2 (t2, op_not_3, op_not_4, op_not_5); // p3'p4'p5'
+	and and1(RD, t1, t2);  //regDst = p0'p1'p2'p3'p4'p5'p6'
+	
+	my_and_3bit mand3 (B, opcode[5], opcode[0], op_not_4); // branch = p5p4'p0
+	my_and_3bit mand4 (L, op_not_5, op_not_4, opcode[3]); // memRead = p5'p4'p3
+	and and2(S, op_not_5, opcode[4]); //memWrite = p5'p4
+	my_and_3bit mand5 (M, opcode[5], op_not_4, op_not_0); // move = p5p4'p0'
+	
+	
+	// Imm = p5'p4'p3'p2'p1 + p5'p4'p3'p2 = t2p2'p1 + t2p2
+	my_and_3bit mand6 (t3, t2, opcode[1], op_not_2); //t2p2'p1
+	and and3(t4, t2, opcode[2]); //t2p2
+	or or1 (Imm, t3, t4);
+	
+	// regWrite = p5'p4' + p5p4p0 + p5p4'p0'
+	and and4(t5, op_not_5, op_not_4); // p5'p4'
+	my_and_3bit mand7 (t6, opcode[5], opcode[4], opcode[0]); // p5p4p0
+	my_and_3bit mand8 (t7, opcode[5], op_not_4, op_not_0); // p5p4'p0'
+	or or2 (t8, t5, t6);
+	or or3 (RW, t8, t7);
+	
+	// byteOperations = (memRead or memWrite) and p0
+	or or4 (t9,L,S);
+	and and5 (BO, t9, opcode[0]);
+	
+	// ALUsrc = memWrite or memRead or Imm = S or L or Imm
+	or or5 (AS, t9, Imm);
+	
+	
+	my_and_3bit mand9 (J, opcode[5], opcode[4], opcode[3]); // J = p5p4p3
+	
+	
+	
+	// ALUop[2]' = p5'p2p1' + p5p4p3 + p5p4'p0' = p5'p2p1' + J + M
+	my_and_3bit mand11 (t10, opcode[2], op_not_5, op_not_1);
+	or or6 (t11, J, M); //J or M
+	or or7 (t12, t11, t10); //ALUop[2]' = p5'p2p1' or (J or M)
+	not not6 (ALUop[2], t12); 
+	
+	
+	//ALUop[1] = RD + p2'p1p0 + p5p4'p0
+	my_and_3bit mand12 (t13, opcode[1], op_not_2, opcode[0]); //p2'p1p0
+	my_and_3bit mand13 (t14, opcode[5], op_not_4, opcode[0]); //p5p4'p0
+	or or8 (t15, t13, t14);
+	or or9 (ALUop[1], t15, RD);
+	
+	//ALUop[0] = RD + p1p0' + S + p5'p3 + p2p1'p0
+	and and6 (t16, opcode[1], op_not_0); //p1p0'
+	and and7 (t17, opcode[3], op_not_5); //p5'p3
+	my_and_3bit mand14 (t18, opcode[2], op_not_1, opcode[0]); // p2p1'p0
+	or or10 (t19, t16, t17);
+	or or11 (t20, t18, t19);
+	or or12 (t21, t20, RD);
+	or or13 (ALUop[0], t21, S);
+	
+	
+	buf buf1(regDst, RD); // regDst = RD
+	buf buf2(branch, B);  // branch = B
+	buf buf3(memRead, L); // memRead = L
+	buf buf4(memWrite, S); //memWrite = S
+	buf buf5(ALUsrc, AS); //ALUsrc = AS
+	buf buf6(regWrite, RW); // regWrite = RW
+	buf buf7(jump, J); //jump = J
+	buf buf8(move, M); //move = M
+	
+	buf buf9(byteOperations, BO); //byteOperations = BO
+	
+	
+	
+
+
+
+	
+
+endmodule

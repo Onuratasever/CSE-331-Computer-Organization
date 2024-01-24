@@ -1,0 +1,76 @@
+module mips(input clock);
+
+	reg [31:0] PC;
+	wire [31:0] instruction;
+	
+	initial begin
+			PC = 32'b00000000000000000000000000000000;
+	end
+	
+	instruction_block instr_block(.instruction(instruction), .pc(PC));
+
+	always @(posedge clock)
+		begin
+		
+			
+			if (instruction[5:0] == 6'b000010) begin
+				$display ("add instruction\n\n");
+			end
+			else if (instruction[5:0] == 6'b000011) begin
+				$display ("sub instruction\n\n");
+			end
+			else if (instruction[5:0] == 6'b000100) begin
+				$display ("and instruction\n\n");
+			end
+			else if (instruction[5:0] == 6'b000101) begin
+				$display ("or instruction\n\n");
+			end
+			else if (instruction[5:0] == 6'b000111) begin
+				$display ("slt instruction\n\n");
+			end
+			else if (instruction[5:0] == 6'b001000) begin
+				$display ("jr instruction\n\n");
+			end
+			else if (opcode == 6'b000010) begin
+				$display ("addi instruction\n\n");
+			end
+			else if (opcode == 6'b000011) begin
+				$display ("subi instruction\n\n");
+			end
+			else if (opcode == 6'b000100) begin
+				$display ("andi instruction\n\n");
+			end
+			else if (opcode == 6'b000101) begin
+				$display ("ori instruction\n\n");
+			end
+			else if (opcode == 6'b001000) begin
+				$display ("lw instruction\n\n");
+			end
+			else if (opcode == 6'b010000) begin
+				$display ("sw instruction\n\n");
+			end
+			else if (opcode == 6'b001001) begin
+				$display ("lb instruction\n\n");
+			end
+			else if (opcode == 6'b010001) begin
+				$display ("sb instruction\n\n");
+			end
+			else if (opcode == 6'b000111) begin
+				$display ("slti instruction\n\n");
+			end
+			else if (opcode == 6'b100011) begin
+				$display ("beq instruction\n\n");
+			end
+			else if (opcode == 6'b100111) begin
+				$display ("bne instruction\n\n");
+			end
+			else if (opcode == 6'b111000) begin
+				$display ("jump instruction\n\n");
+			end
+			else if (opcode == 6'b111001) begin
+				$display ("jal instruction\n\n");
+			end
+		end
+
+
+endmodule
